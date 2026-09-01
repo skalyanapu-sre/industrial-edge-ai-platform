@@ -535,9 +535,7 @@ class RuleBasedPredictor(Predictor):
 
         if reading.fan_speed_pct >= 85 and temperature_delta < 10:
             risk += 0.25
-            reasons.append(
-                "Low return-to-supply temperature differential while fan speed is high."
-            )
+            reasons.append("Low return-to-supply temperature differential while fan speed is high.")
 
         if reading.power_kw >= 18:
             risk += 0.15
@@ -706,8 +704,7 @@ from app.api.routes import router
 app = FastAPI(
     title="Industrial Edge AI Inference API",
     description=(
-        "Reference API for industrial telemetry validation "
-        "and predictive-maintenance inference."
+        "Reference API for industrial telemetry validation and predictive-maintenance inference."
     ),
     version="0.1.0",
 )
